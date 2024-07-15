@@ -1,0 +1,51 @@
+.ctn_title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.ctn_select {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+  border: 10px solid #eceaf1;
+  border-radius: 10px;
+  width: 90%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.ctn_select_nurse {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ctn_select_left {
+  text-align: left;
+  font-size: 15px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid gray;
+}
+
+.ctn_select_left > img {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  border: 2px #de3a01 solid;
+  border-radius: 100%;
+}
+
+.ctn_select_nurse_description{
+  width: 80%;
+}

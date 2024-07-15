@@ -1,0 +1,59 @@
+.ctn_onboarding {
+  position: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ctn_photo {
+  border-radius: 100%;
+  border: 2px solid #de3a01;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctn_photo > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.comment {
+  resize: none;
+  height: 100px;
+  width: 350px;
+  border: 2px solid #de3a01;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 10px;
+}
+
+.comment:focus {
+  outline: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+input[type="checkbox"] + label {
+  padding: 10px;
+  border: 2px solid #de3a01;
+  
+  font-style: italic;
+  border-radius: 10px;
+  font-size: 15px;
+  
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #de3a01;;
+  font-style: normal;
+}

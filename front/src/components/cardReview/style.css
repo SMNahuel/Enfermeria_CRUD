@@ -1,0 +1,8 @@
+.ctn_card_review{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid gray;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+.ctn_home {
+  display: flex;
+  padding: 20px;
+}
+
+.ctn_home_info {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  width: 60%;
+  height: 70vh;
+  justify-content: center;
+}
+
+.ctn_home_img {
+  width: 20%;
+}

@@ -1,0 +1,7 @@
+.ctn_client_data{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

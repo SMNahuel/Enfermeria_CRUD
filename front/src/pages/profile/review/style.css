@@ -1,0 +1,6 @@
+.ctn_review_nurse{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,41 @@
+.ctn_footer_admin{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.ctn_footer_admin > p{
+    border: 2px solid  #DE3A01 ;
+    color: #DE3A01;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ctn_footer_admin > p:hover{
+    background-color: #DE3A01 ;
+    color: white;
+}
+
+.ctn_area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ctn_nurse{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.ctn_nurse > img{
+    width: 80px;
+    height: 80px;
+}

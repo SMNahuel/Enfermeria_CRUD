@@ -1,0 +1,45 @@
+.ctn_nurse_review {
+    width: 90%;
+  border: 10px solid #eceaf1;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ctn_nurse_review_img > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 2px solid #de3a01;
+}
+
+.ctn_nurse_review_img {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ctn_nurse_data {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.ctn_nurse_review_card {
+  display: flex;
+  width: 90%;
+  flex-direction: row;
+}
+
+.ctn_nurse_point {
+  display: flex;
+  flex-direction: row;
+  width: 20%;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  
+}
