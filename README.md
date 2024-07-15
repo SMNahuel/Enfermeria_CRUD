@@ -18,45 +18,14 @@ El proyecto se centra en un acercamiento entre enfermeros profecionales que pued
 
 # API DOCU
 
-1. Desplazar a la carpeta api
+NodeJs - Express -> MongoDB - JWT 
+# Rutas 
 
-```bash
-cd api
-```
 
-2. Instalar los modulos
 
-```bash
-npm install
-```
 
-3. Levantar el proyecto
 
-```bash
-npm start
-```
+## CRUD 
 
-**front**
+Se solicita token ADMIN para poder ingresar 
 
-1. En otro pestana line command ubicarse en la carpeta front 
-
-```bash
-cd front
-```
-
-2. Instalar los modulos
-
-```bash
-npm install -f 
-```
-> [!NOTE]
->
-> - **Si se obtiene un error en la primera instalar volver a utilizar el commando anterior**
-
-3. Levantar el proyecto
-
-```bash
-npm start
-```
-
-4. Preguntara si quieres usar otro puerto le damos sí.
