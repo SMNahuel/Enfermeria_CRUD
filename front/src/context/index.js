@@ -33,7 +33,7 @@ export const useStore = create(
 
       /*------------------------------ Data que tenemos del token */
       init: async () => {
-        AxiosInstance.get("http://localhost:3000/user")
+        AxiosInstance.get(`${process.env.API_URL}/user`)
           .then((r) => {
             set({ user: r.data[0] });
           })
@@ -73,7 +73,7 @@ export const useStore = create(
 
       loginUser: (form, navigate) => {
         axios
-          .post("http://localhost:3000/auth/login", form)
+          .post(`${process.env.API_URL}/auth/login`, form)
           .then(({ data }) => {
             console.log(data);
             localStorage.setItem("auth", data.token);
@@ -100,7 +100,7 @@ export const useStore = create(
 
       /* ----------------------------- Selection Nurse  */
       selectNurse: (body) => {
-        AxiosInstance.post(`http://localhost:3000/user/request/`, body)
+        AxiosInstance.post(`${process.env.API_URL}/user/request/`, body)
           .then((r) => {
             toast("Felicidades seleccionaste a tu enfermero");
           })
@@ -128,7 +128,7 @@ export const useStore = create(
 
       finishOnboarding: (navigate, body, type) => {
         AxiosInstance.post(
-          `http://localhost:3000/user/onboarding/${type}`,
+          `${process.env.API_URL}/user/onboarding/${type}`,
           body
         )
           .then((r) => {
@@ -150,7 +150,7 @@ export const useStore = create(
       initCrud: () => {
         set({ loading: true });
         set({ modal: false });
-        AxiosInstance.get("http://localhost:3000/crud")
+        AxiosInstance.get(`${process.env.API_URL}/crud`)
           .then(({ data }) => {
             set({ crud: data });
           })
@@ -165,7 +165,7 @@ export const useStore = create(
       /* ------------ Area*/
 
       create: (dest, item) => {
-        AxiosInstance.post(`http://localhost:3000/crud/${dest}`, item)
+        AxiosInstance.post(`${process.env.API_URL}/crud/${dest}`, item)
           .then((response) => {
             set((state) => ({
               crud: {
@@ -182,7 +182,7 @@ export const useStore = create(
       },
 
       deleteRequest: (dest, item) => {
-        AxiosInstance.delete(`http://localhost:3000/crud/${dest}/${item.name}`)
+        AxiosInstance.delete(`${process.env.API_URL}/crud/${dest}/${item.name}`)
           .then((response) => {
             set((state) => ({
               crud: {
@@ -199,7 +199,7 @@ export const useStore = create(
 
       update: (dest, item) => {
         AxiosInstance.put(
-          `http://localhost:3000/${dest.toLowerCase()}/${item._id}`,
+          `${process.env.API_URL}/${dest.toLowerCase()}/${item._id}`,
           item
         )
           .then((response) => {
@@ -222,7 +222,7 @@ export const useStore = create(
 
       /* ------------ User*/
       deleteUser: (item, dest) => {
-        AxiosInstance.delete(`http://localhost:3000/crud/${dest}/${item._id}`)
+        AxiosInstance.delete(`${process.env.API_URL}/crud/${dest}/${item._id}`)
           .then((response) => {
             set((state) => ({
               crud: {
@@ -237,7 +237,7 @@ export const useStore = create(
       },
 
       updateUser: (data, dest) => {
-        AxiosInstance.put(`http://localhost:3000/${dest}/`, data)
+        AxiosInstance.put(`${process.env.API_URL}/${dest}/`, data)
           .then((response) => {
             set((state) => ({
               crud: {

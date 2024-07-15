@@ -10,7 +10,7 @@ const NursePage = (props) => {
   
 
   useEffect(() => {
-    axios.get("http://localhost:3000/nurse").then((r) => {
+    axios.get(`${process.env.API_URL}/nurse`).then((r) => {
       setNurse(r.data);
     });
   }, []);

@@ -32,7 +32,7 @@ const RegisterPage = () => {
   const handleRegister = () => {
     setLoading(true);
     axios
-      .post("http://localhost:3000/auth/register", form)
+      .post(`${process.env.API_URL}/auth/register`, form)
       .then(() => {
         navigate("/login");
       })

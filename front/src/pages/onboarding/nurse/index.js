@@ -38,7 +38,7 @@ const OnboardingPageNurse = () => {
 
   useEffect(() => {
     
-    AxiosInstance.get("http://localhost:3000/area")
+    AxiosInstance.get(`${process.env.API_URL}/area"`)
       .then(({ data }) => {
         setArea(data);
       })
@@ -50,7 +50,7 @@ const OnboardingPageNurse = () => {
   }, []);
 
   useEffect(() => {
-    AxiosInstance.get("http://localhost:3000/service")
+    AxiosInstance.get(`${process.env.API_URL}/service`)
       .then(({ data }) => {
         setService(data);
       })
@@ -148,7 +148,7 @@ const OnboardingPageNurse = () => {
       registrationNumber: nurse.registrationNumber,
     };
 
-    AxiosInstance.post("http://localhost:3000/nurse", body)
+    AxiosInstance.post(`${process.env.API_URL}/nurse`, body)
       .then((r) => {
         navigate("/");
       })

@@ -19,7 +19,7 @@ const ReviewPage = () => {
 
   useEffect(() => {
     AxiosInstance.get(
-      `http://localhost:3000/nurse/${location.pathname.split("/")[3]}`
+      `${process.env.API_URL}/nurse/${location.pathname.split("/")[3]}`
     )
       .then((r) => {
         setNurse(r.data[0]);
@@ -29,7 +29,7 @@ const ReviewPage = () => {
 
   useEffect(() => {
     AxiosInstance.get(
-      `http://localhost:3000/review/${location.pathname.split("/")[3]}`
+      `${process.env.API_URL}/review/${location.pathname.split("/")[3]}`
     )
       .then(({ data }) => {
         setReview(data);

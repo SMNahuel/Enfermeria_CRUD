@@ -23,7 +23,7 @@ const MessagePage = () => {
   let idClient = location.pathname.split("/")[3];
   let idNurse = location.pathname.split("/")[4];
   useEffect(() => {
-    AxiosInstance.get(`http://localhost:3000/message/${idClient}/${idNurse}`)
+    AxiosInstance.get(`${process.env.API_URL}/message/${idClient}/${idNurse}`)
       .then(({ data }) => {
         setHistory(data);
       })
@@ -34,7 +34,7 @@ const MessagePage = () => {
 
   useEffect(() => {
     if (user.rol === 0) {
-      AxiosInstance.get(`http://localhost:3000/nurse/nurse/${idNurse}`).then(
+      AxiosInstance.get(`${process.env.API_URL}/nurse/nurse/${idNurse}`).then(
         ({ data }) => {
           setRecieved(data);
         }
@@ -42,7 +42,7 @@ const MessagePage = () => {
     }
 
     if (user.rol === 1) {
-      AxiosInstance.get(`http://localhost:3000/client/${idClient}`).then(
+      AxiosInstance.get(`${process.env.API_URL}/client/${idClient}`).then(
         ({ data }) => {
           setRecieved(data);
         }
@@ -52,7 +52,7 @@ const MessagePage = () => {
 
   const handleSendMessage = () => {
     let who = user.rol === 0 ? true : false;
-    AxiosInstance.post(`http://localhost:3000/message/${idClient}/${idNurse}`, {
+    AxiosInstance.post(`${process.env.API_URL}/message/${idClient}/${idNurse}`, {
       content: message,
       who: who,
     })

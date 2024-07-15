@@ -41,7 +41,7 @@ const ReviewNurse = () => {
         qualification: rating,
       };
 
-      AxiosInstance.post("http://localhost:3000/review", body)
+      AxiosInstance.post(`${process.env.API_URL}/review`, body)
         .then(() => {
           toast("Genial se envio tu review");
         })

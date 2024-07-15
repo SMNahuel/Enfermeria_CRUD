@@ -11,7 +11,7 @@ const CardReview = ({ review }) => {
 
   useEffect(() => {
     AxiosInstance.get(
-      `http://localhost:3000/client/client/${review.idClient}`
+      `${process.env.API_URL}client/client/${review.idClient}`
     ).then(({ data }) => {
       setUser(data);
     });
