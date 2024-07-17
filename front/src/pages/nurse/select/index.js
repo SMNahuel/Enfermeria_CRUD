@@ -42,7 +42,7 @@ const SelectNursePage = () => {
 
   useEffect(() => {
     AxiosInstance.get(
-      `${process.env.API_URL}/nurse/${location.pathname.split("/")[3]}`
+      `${process.env.REACT_APP_API_URL}/nurse/${location.pathname.split("/")[3]}`
     )
       .then((r) => {
         setNurse(r.data[0]);

@@ -1,0 +1,71 @@
+.ctn_carrousel {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-weight: bold;
+}
+
+.one_one {
+  background-image: url("/public/image_1.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.one_two {
+  background-image: url("/public/image_2.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.one_three {
+  background-image: url("/public/image_3.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+
+.two_one {
+  background-image: url("/public/image_4.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.two_two {
+  background-image: url("/public/image_5.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.two_three {
+  background-image: url("/public/image_6.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+
+.three_one {
+  background-image: url("/public/image_7.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.three_two {
+  background-image: url("/public/image_8.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.three_three {
+  background-image: url("/public/image_9.png");
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}

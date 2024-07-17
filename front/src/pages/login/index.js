@@ -8,6 +8,8 @@ import ButtonComponent from "../../components/button";
 // Context
 import { useStore } from "../../context";
 
+import "./style.css";
+
 const LoginPages = () => {
   const [form, setForm] = useState({
     email: "",
@@ -42,7 +44,7 @@ const LoginPages = () => {
     <>
       <FooterComponent />
       <div className="ctn">
-        <div className="ctn_form">
+        <div className="ctn_form_login">
           <div className="ctn_form_input">
             <input
               onChange={(e) => handleForm(e)}
@@ -59,11 +61,16 @@ const LoginPages = () => {
               type="password"
             />
           </div>
-          <ButtonComponent type={"xl"} text="Ingresar" func={handleLogin} />
+          <ButtonComponent
+            type={"m"}
+            color="blue"
+            text="Ingresar"
+            func={handleLogin}
+          />
           <p>
             No tienes cuenta?{"  "}
             <ButtonComponent
-              type={"normal"}
+              type={"s"}
               text="Registrate"
               func={handleRegister}
             />

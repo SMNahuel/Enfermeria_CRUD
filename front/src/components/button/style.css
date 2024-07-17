@@ -1,37 +1,93 @@
-
 button {
-  border: 2px solid #DE3A01;
-  background-color: transparent;
-  border-radius: 20px;
   font-size: 10px;
-  font-weight: bold;
-  color: #DE3A01;
-  cursor: pointer;
-  min-width: 100px;
-}
-
-button:hover{
-  background-color: #DE3A01;
-  color: white
-}
-
-.xl{
-  width: 50%;
-  height: 50px;
-  font-size: 15px;
-  margin-top: 20px;
-}
-
-.normal {
-  border: none !important;
-}
-
-.xl-green{
-  background-color: #569974;
-  width: 50%;
-  height: 50px;
-  font-size: 15px;
-  margin-top: 20px;
-  color: white;
   border: none;
+  font-weight: bold !important;
+  
+}
+
+.s_white{
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  margin-left: 5px;
+  background-color: #E8EDF2;
+  color: black;
+  cursor: pointer; 
+}
+
+.s_blue{
+  border-radius: 5px;
+  background-color: #1a80e5;
+  color: white !important;
+  width: 100px;
+  height: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.m_white {
+  border-radius: 10px;
+  width: 150px;
+  height: 35px;
+  background-color: #E8EDF2;
+  color: black;
+  cursor: pointer;
+  margin-left: 7px;
+  
+}
+
+.m_blue {
+  border-radius: 10px;
+  background-color: #1a80e5;
+  color: white !important;
+  width: 150px;
+  height: 35px;
+  color: black;
+  cursor: pointer;
+}
+
+.m_blue:hover {
+  background-color: white;
+  border: 2px solid #1a80e5;
+  color: #1a80e5 !important;
+}
+
+.m_white:hover {
+  background-color: white;
+  border: 2px solid #1a80e5;
+  color: #1a80e5 !important;
+}
+
+
+.l_blue{
+  border-radius: 10px;
+  background-color: #1a80e5;
+  color: white !important;
+  width: 250px;
+  height: 45px;
+  color: black;
+  cursor: pointer;
+}
+
+
+.l_white{
+  border-radius: 10px;
+  background-color: #E8EDF2;
+  color: black;
+  width: 250px;
+  height: 45px;
+  color: black;
+  cursor: pointer;
+}
+
+.l_blue:hover{
+  background-color: white;
+  border: 2px solid #1a80e5;
+  color: #1a80e5 !important;
+}
+
+.l_white:hover{
+  background-color: white;
+  border: 2px solid #1a80e5;
+  color: #1a80e5 !important;
 }

@@ -17,11 +17,13 @@ import MessagePage from "./pages/message";
 import ReviewPage from "./pages/review";
 import ReviewNurse from "./pages/profile/review";
 import { useEffect } from "react";
+import RegisterPatient from "./pages/register/patient";
+import RegisterNurse from "./pages/register/nurse";
 /* Store */
 
 export const App = () => {
-  const { user, init, initCrud } = useStore((state) => state);
-  
+  const { user, init, initCrud, lang } = useStore((state) => state);
+
   useEffect(() => {
     if (localStorage.getItem("auth")) {
       if (user === null) {
@@ -31,7 +33,7 @@ export const App = () => {
         initCrud();
       }
     }
-  }, [init, initCrud, user?.rol, user]);
+  }, [init, initCrud, user?.rol, user, lang]);
 
   return (
     <BrowserRouter>
@@ -45,6 +47,14 @@ export const App = () => {
         <Route
           path="/register"
           element={!user ? <RegisterPage /> : <Navigate to="/" replace />}
+        />
+        <Route
+          path="/register/patient"
+          element={!user ? <RegisterPatient /> : <Navigate to="/" replace />}
+        />
+        <Route
+          path="/register/nurse"
+          element={!user ? <RegisterNurse /> : <Navigate to="/" replace />}
         />
         <Route
           path="/crud"

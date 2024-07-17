@@ -2,33 +2,30 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  
 }
 
 .ctn_footer {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-
-  box-shadow: 0px 3px 27px 1px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0px 3px 27px 1px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0px 3px 27px 1px rgba(0, 0, 0, 0.35);
+  border-bottom: 0.5px solid rgb(207, 200, 200);
 }
 
-.ctn_footer_btn{
+.ctn_footer_btn {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  margin-right: 28px;
+  
 }
 
-.ctn_footer_btn > a{
-  width: 50%;
+.ctn_footer_btn > a {
   text-decoration: none;
   color: black;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-left: 20px;
   text-align: center;
 }
 
@@ -42,21 +39,18 @@
 .ctn_btn_contact {
   display: flex;
   justify-content: center;
-  padding: 20px;
-  
+  align-items: center;
 }
 
 .logo {
   height: 40px;
 }
 
-
-
 /* a:hover {
   background-color: #de3a01;
 }
  */
- /* Position and sizing of burger button */
+/* Position and sizing of burger button */
 
 /*
 Sidebar wrapper styles
@@ -64,8 +58,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 */
 .ctn_menu {
   position: fixed;
-  
+
   margin-top: -10px;
   margin-left: -50px;
 }
-

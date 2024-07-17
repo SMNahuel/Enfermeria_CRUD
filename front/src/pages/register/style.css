@@ -1,18 +1,17 @@
 .ctn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .ctn_form {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
-  margin-top: 80px;
-  border: 2px solid #de3a01;
-  padding: 10px;
-  width: 50%;
-  border-radius: 10px;
+  width: 100%;
+  padding-left: 80px;
 }
 
 input {
@@ -20,19 +19,28 @@ input {
   font-size: 15px;
   margin: 10px;
   text-align: center;
-  width: 90%;
+  width: 50%;
   background-color: transparent;
+  text-align: left;
+  color: #1c8cd6;
+}
+
+input::placeholder{
+  color: #4F7A94;
+  font-weight: 300;
 }
 
 .ctn_form_input {
-  border: 2px solid #de3a01;
   border-radius: 10px;
   margin: 10px;
-  width: 50%;
+  width: 30%;
+  background-color: #E8EDF2;;
+  
 }
 
 input:focus {
   outline: none;
+  color: #1c8cd6;
 }
 
 .ctn_form_name {
@@ -90,7 +98,7 @@ input:focus {
   -moz-appearance: none;
 }
 
-select{
+select {
   border: none;
   font-size: 15px;
   width: 100%;
@@ -99,6 +107,15 @@ select{
   text-align: center;
 }
 
-select:focus{
+select:focus {
   outline: none;
+}
+
+.ctn_register {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 20%;
+  align-items: center;
+  justify-content: center;
 }

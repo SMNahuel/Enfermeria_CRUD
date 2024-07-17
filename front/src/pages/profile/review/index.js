@@ -41,7 +41,7 @@ const ReviewNurse = () => {
         qualification: rating,
       };
 
-      AxiosInstance.post(`${process.env.API_URL}/review`, body)
+      AxiosInstance.post(`${process.env.REACT_APP_API_URL}/review`, body)
         .then(() => {
           toast("Genial se envio tu review");
         })

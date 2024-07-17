@@ -6,7 +6,7 @@ const MessageComponent = ({ item }) => {
   const [state, setState] = useState();
   const [show, setShow] = useState(false);
   useEffect(() => {
-    AxiosInstance.get(`${process.env.API_URL}/user/${item.idAuthor}`).then(
+    AxiosInstance.get(`${process.env.REACT_APP_API_URL}/user/${item.idAuthor}`).then(
       (r) => {
         setState(r.data);
       }

@@ -1,8 +1,10 @@
 import './style.css'
-const ButtonComponent = ({ text, func, type }) => {
+const ButtonComponent = ({ text, func, type, color }) => {
   return (
     <>
-      <button className={type} onClick={() => func()}>{text}</button>
+      <button className={`${type}_${color}`} onClick={() => func()}>
+        {text}
+      </button>
     </>
   );
 };

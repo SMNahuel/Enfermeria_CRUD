@@ -1,32 +1,70 @@
-
+import ButtonComponent from "../../components/button";
+import CarrouselElements from "../../components/carrouselHome";
 import FooterComponent from "../../components/footer";
+import { HomeConstat } from "../../constant/HomeConstant";
+import { useStore } from "../../context";
 
 import "./style.css";
 
 const HomePages = () => {
+  const { lang } = useStore();
+  const Service = [
+    {
+      name: HomeConstat[lang].service.one,
+    },
+    {
+      name: HomeConstat[lang].service.two,
+    },
+    {
+      name: HomeConstat[lang].service.three,
+    },
+  ];
 
+  const Us = [
+    {
+      name: HomeConstat[lang].us.one,
+    },
+    {
+      name: HomeConstat[lang].us.two,
+    },
+    {
+      name: HomeConstat[lang].us.three,
+    },
+  ];
+
+  const Resource = [
+    {
+      name: HomeConstat[lang].resource.one,
+    },
+    {
+      name: HomeConstat[lang].resource.two,
+    },
+    {
+      name: HomeConstat[lang].resource.three,
+    },
+  ];
   return (
     <>
       <FooterComponent />
       <div className="ctn_home">
-        <div className="ctn_home_info">
-          <h1>
-            Servicio de Enfermería Perzonalizada a tu Domicilio:
-            <br />
-            Atención que Marca la Diferencia.
-          </h1>
-
-          <p>
-            Nuestro personal altamente capacitado se esfuerza por ofrecer
-            atención profesional con un toque de calidez y empatía. Nos
-            dedicamos a asegurarnos de que sus seres queridos se sientan seguros
-            y bien atendidos, proporcionando una atención personalizada que se
-            adapte a sus necesidades individuales
-          </p>
+        <div className="ctn_head">
+          <h1>{HomeConstat[lang].title}</h1>
+          <div className="ctn_head_btn">
+            <ButtonComponent
+              text={HomeConstat[lang].showDoctor}
+              type={"m"}
+              color={"blue"}
+            />
+            <ButtonComponent
+              text={HomeConstat[lang].showCalendary}
+              type={"m"}
+              color={"white"}
+            />
+          </div>
         </div>
-        <div className="ctn_home_img">
-          <img src="/imagen1.png" alt="image_ilustration"/>
-        </div>
+        <CarrouselElements Service={HomeConstat[lang].service} />
+        <CarrouselElements Service={HomeConstat[lang].us} />
+        <CarrouselElements Service={HomeConstat[lang].resource} />
       </div>
     </>
   );

@@ -1,113 +1,66 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useNavigate } from "react-router-dom";
 
 import "./style.css";
-import {
-  FloatingMenu,
-  MainButton,
-  ChildButton,
-} from "react-floating-button-menu";
+
 //Component
 import ButtonComponent from "../button";
 
 // Helpers
 
 import { useStore } from "../../context";
+import { HomeConstat } from "../../constant/HomeConstant";
 
 const FooterComponent = () => {
-  const { logoutUser, user } = useStore((state) => state);
-
-  const [isOpen, setOpen] = useState(false);
+  const { logoutUser, setLang, lang } = useStore((state) => state);
 
   const navigate = useNavigate();
-
-  const handleProfile = () => {
-    navigate("/profile");
-  };
-
-  const handleLogin = () => {
-    navigate("/login");
-  };
-
-  const handleCRUD = () => {
-    navigate("/crud");
-  };
-
   const handleDeleteTokenb = async () => {
-    localStorage.removeItem("auth")
-  }
-
+    localStorage.removeItem("auth");
+  };
 
   const handleLogout = () => {
-    handleDeleteTokenb()
-    .then(() => {
-    logoutUser(navigate);
-    })
+    handleDeleteTokenb().then(() => {
+      logoutUser(navigate);
+    });
   };
 
   return (
     <div className="ctn">
       <div className="ctn_footer">
         <div className="ctn_btn_img">
-          <img className="logo" src="/Logo.png" alt="Logo" />
+          <h3 onClick={() => navigate("/")}>HealtCare</h3>
         </div>
+        <p onClick={() => setLang("es")}>Es</p>
+        <p onClick={() => setLang("en")}>En</p>
         <div className="ctn_footer_btn">
-          <a href="/">
-            <p>Servicio</p>
+          <a href="/login">
+            <p>{HomeConstat[lang].forDoc}</p>
           </a>
-          <a href="/nurse">
-            <p>Enfermeros</p>
+          <a href="/login">
+            <p>{HomeConstat[lang].forPat}</p>
           </a>
           <a href="/register">
-            <p>Unete al equipo</p>
+            <p>{HomeConstat[lang].resourcer}</p>
+          </a>
+          <a href="/register">
+            <p>{HomeConstat[lang].FAQ}</p>
           </a>
         </div>
         <div className="ctn_btn_contact">
-          {user ? (
-            <div>
-              <div className="ctn_menu">
-                <FloatingMenu
-                  slideSpeed={500}
-                  direction="down"
-                  spacing={5}
-                  isOpen={isOpen}
-                >
-                  <MainButton
-                    iconResting={<p>Menu</p>}
-                    iconActive={<p>X</p>}
-                    backgroundColor="black"
-                    onClick={() => setOpen(!isOpen)}
-                    size={56}
-                  />
-
-                  {user.rol === 2 ? (
-                    <ChildButton
-                      icon={<p>CRUD</p>}
-                      backgroundColor="white"
-                      size={40}
-                      onClick={handleCRUD}
-                    />
-                  ) : (
-                    <ChildButton
-                      icon={<p>Perfil</p>}
-                      backgroundColor="white"
-                      size={40}
-                      onClick={handleProfile}
-                    />
-                  )}
-                  <ChildButton
-                    icon={<p>Salir</p>}
-                    backgroundColor="white"
-                    size={40}
-                    onClick={handleLogout}
-                  />
-                </FloatingMenu>
-              </div>
-            </div>
-          ) : (
-            <ButtonComponent text={"Ingresar"} func={handleLogin} />
-          )}
+          <ButtonComponent
+            type={"s"}
+            color="blue"
+            text={HomeConstat[lang].login}
+            func={() => navigate("/login")}
+          />
+          <ButtonComponent
+            type={"s"}
+            color="white"
+            text={HomeConstat[lang].sing}
+            func={() => navigate("/register")}
+          />
         </div>
       </div>
     </div>

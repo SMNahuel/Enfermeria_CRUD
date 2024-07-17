@@ -1,0 +1,11 @@
+.ctn_form_register_nurse {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.ctn_form_head{
+  text-align: center;
+}
